@@ -1,0 +1,24 @@
+# Ignore sensitive files
+*.pcap
+*.pcapng
+passwords.txt
+wordlists/
+id_rsa
+id_rsa.pub
+*.key
+
+# Ignore large files
+*.iso
+*.ova
+*.vmdk
+*.zip
+*.tar.gz
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore editor files
+*.swp
+*.swo
+*~
