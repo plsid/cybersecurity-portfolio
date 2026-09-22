@@ -1,0 +1,81 @@
+# VulnScan - Network Vulnerability Scanner
+
+A lightweight network vulnerability scanner built in Python for ethical hacking and penetration testing education. Designed to run on Kali Linux.
+
+---
+
+## Features
+
+- **Host Discovery**: ARP scanning to find live hosts on network
+- **Port Scanning**: TCP SYN stealth scanning
+- **Service Detection**: Banner grabbing to identify services
+- **Vulnerability Detection**: Checks for known CVEs and misconfigurations
+- **Lightweight**: Pure Python with minimal dependencies
+
+---
+
+## Python Files
+ 
+*main.py - Main entry point
+*scanner/host_discovery.py - ARP scanning
+*scanner/port_scanner.py - TCP SYN scanning
+*scanner/service_detect.py - Banner grabbing
+*scanner/vuln_checks.py - Vulnerability detection
+
+---
+
+## Usage - All commands require root privileges (sudo)
+
+- **Basic Syntax**: sudo python3 main.py -t <TARGET> [OPTIONS]
+
+---
+
+**1. Host Discovery**
+*Find all live hosts on a network.
+-sudo python3 main.py -t 192.168.56.0/24 --discovery
+
+**2. Basic Port Scan**
+*Scan a target for open ports.
+-sudo python3 main.py -t 192.168.56.101 -p 1-100
+
+**3. Scan Specific Ports**
+*Check only specific ports.
+-sudo python3 main.py -t 192.168.56.101 -p 21,22,80,443,3306
+
+**4. Full Port Scan**
+*Scan all 65,535 ports (takes longer).
+-sudo python3 main.py -t 192.168.56.101 -p 1-65535
+
+**5. Scan with Banner Grabbing**
+*Identify service versions.
+-sudo python3 main.py -t 192.168.56.101 -p 1-100 --banner
+
+**6. Vulnerability Scan**
+*Check for known CVEs and misconfigurations.
+-sudo python3 main.py -t 192.168.56.101 -p 1-100 --vuln-check
+
+**7. Comprehensive Scan**
+*Full scan with all features enabled.
+-sudo python3 main.py -t 192.168.56.101 -p 1-1000 --banner --vuln-check
+
+---
+
+##Project Structure
+
+*vulnscan/
+├── main.py                   # Entry point
+├── scanner/
+│   ├── __init__.py           # Package initialization
+│   ├── host_discovery.py     # ARP scanning
+│   ├── port_scanner.py       # TCP SYN scanning
+│   ├── service_detect.py     # Banner grabbing
+│   └── vuln_checks.py        # Vulnerability database
+├── reports/                  # Scan reports output
+├── vuln_db/
+│   └── services.json         # Vulnerability signatures
+
+
+└── README.md                 # This file
+
+
+
