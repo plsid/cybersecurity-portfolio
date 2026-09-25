@@ -16,11 +16,11 @@ A lightweight network vulnerability scanner built in Python for ethical hacking 
 
 ## Python Files
  
-*main.py - Main entry point
-*scanner/host_discovery.py - ARP scanning
-*scanner/port_scanner.py - TCP SYN scanning
-*scanner/service_detect.py - Banner grabbing
-*scanner/vuln_checks.py - Vulnerability detection
+- main.py - Main entry point
+- scanner/host_discovery.py - ARP scanning
+- scanner/port_scanner.py - TCP SYN scanning
+- scanner/service_detect.py - Banner grabbing
+- scanner/vuln_checks.py - Vulnerability detection
 
 ---
 
@@ -31,38 +31,38 @@ A lightweight network vulnerability scanner built in Python for ethical hacking 
 ---
 
 **1. Host Discovery**
-*Find all live hosts on a network.
--sudo python3 main.py -t 192.168.56.0/24 --discovery
+* Find all live hosts on a network.
+- sudo python3 main.py -t 192.168.56.0/24 --discovery
 
 **2. Basic Port Scan**
-*Scan a target for open ports.
--sudo python3 main.py -t 192.168.56.101 -p 1-100
+* Scan a target for open ports.
+- sudo python3 main.py -t 192.168.56.101 -p 1-100
 
 **3. Scan Specific Ports**
 *Check only specific ports.
 -sudo python3 main.py -t 192.168.56.101 -p 21,22,80,443,3306
 
 **4. Full Port Scan**
-*Scan all 65,535 ports (takes longer).
--sudo python3 main.py -t 192.168.56.101 -p 1-65535
+* Scan all 65,535 ports (takes longer).
+- sudo python3 main.py -t 192.168.56.101 -p 1-65535
 
 **5. Scan with Banner Grabbing**
-*Identify service versions.
--sudo python3 main.py -t 192.168.56.101 -p 1-100 --banner
+* Identify service versions.
+- sudo python3 main.py -t 192.168.56.101 -p 1-100 --banner
 
 **6. Vulnerability Scan**
-*Check for known CVEs and misconfigurations.
--sudo python3 main.py -t 192.168.56.101 -p 1-100 --vuln-check
+* Check for known CVEs and misconfigurations.
+- sudo python3 main.py -t 192.168.56.101 -p 1-100 --vuln-check
 
 **7. Comprehensive Scan**
-*Full scan with all features enabled.
--sudo python3 main.py -t 192.168.56.101 -p 1-1000 --banner --vuln-check
+* Full scan with all features enabled.
+- sudo python3 main.py -t 192.168.56.101 -p 1-1000 --banner --vuln-check
 
 ---
 
-##Project Structure
+## Project Structure
 
-*vulnscan/
+* vulnscan/
 ├── main.py                   # Entry point
 ├── scanner/
 │   ├── __init__.py           # Package initialization
@@ -76,6 +76,7 @@ A lightweight network vulnerability scanner built in Python for ethical hacking 
 
 
 └── README.md                 # This file
+
 
 
 

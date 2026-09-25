@@ -23,11 +23,11 @@ Aspiring cybersecurity professional with practical experience in:
 - **Attacker VM:** Kali Linux 2024.1
 - **Targets:** Metasploitable 2, DVWA, DC-1, OWASP WebGoat
 
-## 📝 Walkthroughs
+## 📝 Pentesting
 
 | Machine | Difficulty | Status | Link |
 |---------|------------|--------|------|
-| Metasploitable 2 | Easy | ✅ Complete | [Walkthrough](./walkthroughs/metasploitable2.md) |
+| Metasploitable 2 | Easy | ✅ Complete | [pentesting](./pentesting/metasploitable2.md) |
 | DVWA | Easy | 🔄 In Progress | - |
 | DC-1 | Medium | ⏳ Planned | - |
 
